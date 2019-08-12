@@ -14,7 +14,7 @@ Review.destroy_all
     name: Faker::Food.ingredient,
     cost: Faker::Number.within(range: 1..5),
     origin: Faker::Address.country)
-    5.times do |index|
+  rand(1..15).times do |index|
       @reviews = @product.reviews.create!(
         author: Faker::Name.name,
         content_body: Faker::Lorem.characters(number: 50),
